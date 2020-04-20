@@ -26,6 +26,11 @@ export class MyComponentComponent implements OnInit {
   myEvent(event){
     console.log(event)
   }
+//CSS
+  titleClass = 'red-title'
+  titleClasses ={
+    'red-title' : true,
+    'large-title' : true
 
-
+  }
 }
