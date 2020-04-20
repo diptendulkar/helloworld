@@ -20,4 +20,5 @@ export class MyComponentComponent implements OnInit {
 
   myArr = ['him','hers','yours'];
   obj = false
+  angularLogo = "https://angular.io/resources/images/logos/angular2/angular.png"
 }
