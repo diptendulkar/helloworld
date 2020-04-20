@@ -1,11 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'
-
+import {trigger,state,style,transition,animate,keyframes} from '@angular/animations'
 
 @Component({
   selector: 'app-my-component',
   templateUrl: './my-component.component.html',
-  styleUrls: ['./my-component.component.css']
+  styleUrls: ['./my-component.component.css'],
+
+  animations : [
+    trigger('myAwesomeAnimation', [
+      state('small',style({
+        transform: 'scale(1)',
+      })),
+      state('large',style({
+        transform: 'scale(1.2)',
+      })),
+
+      transition('small <=> large' , animate('300ms ease-in'))
+    ]),
+  ]
 })
 export class MyComponentComponent implements OnInit {
 
@@ -42,9 +55,16 @@ export class MyComponentComponent implements OnInit {
     'font-size' : '2em'
   }
 
+
   //DataService
   someProperty:string = "";
   constructor(private dataService:DataService){
 this.someProperty = this.dataService.myData();
+  }
+
+  //animation
+  state: string = 'small'
+  animateMe(){
+    this.state = (this.state === 'small' ? 'large' : 'small');
   }
 }
