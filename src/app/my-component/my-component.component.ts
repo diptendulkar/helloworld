@@ -18,5 +18,5 @@ export class MyComponentComponent implements OnInit {
 
   }
 
-  myArr =['him','hers','yours'];
+  myArr = ['him','hers','yours'];
 }

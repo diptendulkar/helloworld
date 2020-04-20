@@ -6,3 +6,5 @@
     </ul>
 <p *ngIf="myArr"> NGIF - Checking myArr Obj exisit</p>
 
+<p *ngIf="myArr else otherTmpl"> NGIF ELSE TEMPLATE - Checking myArr Obj exisit</p>
+<ng-template #otherTmpl> No, I do.</ng-template>
