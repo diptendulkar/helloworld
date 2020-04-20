@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service'
+
 
 @Component({
   selector: 'app-my-component',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComponentComponent implements OnInit {
 
-  constructor() { }
+   
 
   ngOnInit(): void {
+    console.log(this.dataService.cars);
   }
   myobject = {
     gender: 'male',
@@ -37,5 +40,11 @@ export class MyComponentComponent implements OnInit {
   titleStyles = {
     'color': 'red',
     'font-size' : '2em'
+  }
+
+  //DataService
+  someProperty:string = "";
+  constructor(private dataService:DataService){
+this.someProperty = this.dataService.myData();
   }
 }
