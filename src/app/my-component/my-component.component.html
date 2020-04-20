@@ -6,5 +6,9 @@
     </ul>
 <p *ngIf="myArr"> NGIF - Checking myArr Obj exisit</p>
 
-<p *ngIf="myArr else otherTmpl"> NGIF ELSE TEMPLATE - Checking myArr Obj exisit</p>
+<p *ngIf="myArr; else otherTmpl"> NGIF ELSE TEMPLATE - Checking myArr Obj exisit</p>
 <ng-template #otherTmpl> No, I do.</ng-template>
+
+<p *ngIf="obj; then tmpl1 else tmpl2"> NGIF ELSE TEMPLATE - Checking myArr Obj exisit</p>
+<ng-template #tmpl1> IF TEMPLATE 1</ng-template>
+<ng-template #tmpl2>  ELSE TEMPLATE 2</ng-template>

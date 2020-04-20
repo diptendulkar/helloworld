@@ -19,4 +19,5 @@ export class MyComponentComponent implements OnInit {
   }
 
   myArr = ['him','hers','yours'];
+  obj = false
 }
