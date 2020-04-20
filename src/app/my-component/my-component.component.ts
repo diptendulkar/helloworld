@@ -33,4 +33,9 @@ export class MyComponentComponent implements OnInit {
     'large-title' : true
 
   }
+  titleStyle = true
+  titleStyles = {
+    'color': 'red',
+    'font-size' : '2em'
+  }
 }
