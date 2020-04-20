@@ -23,6 +23,9 @@ export class MyComponentComponent implements OnInit {
   angularLogo = "https://angular.io/resources/images/logos/angular2/angular.png"
   buttonStatus = false
 
+  myEvent(event){
+    console.log(event)
+  }
 
 
 }
